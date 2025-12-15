@@ -1,0 +1,428 @@
+.panel .side-panel {
+  border-radius: 16px;
+  background: #fff;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+.panel .side-panel .icon {
+  width: max-content;
+  margin: auto;
+  margin-bottom: auto;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  padding: 0.25rem;
+}
+.panel .side-panel .side-box li a {
+  color: #1a1a1a;
+  background: #fff;
+  font-size: 14px;
+  font-family: "Yekan-Re";
+  border-bottom: 1px solid #ddd;
+  border-radius: 0;
+}
+.panel .side-panel .side-box li a:hover {
+  border-right: 4px solid var(--primary-color);
+}
+.panel .side-panel .side-box li a i {
+  background: #ffffff;
+  padding: 6px;
+  border-radius: 6px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+  color: #1a1a1a;
+}
+.panel .side-panel .side-box li a.active {
+  border-right: 4px solid var(--primary-color);
+}
+.panel .side-panel.mobile .accordion-button:not(.collapsed) {
+  color: #000;
+}
+.panel .side-panel.mobile .accordion-button::after {
+  content: "\f474";
+  font-family: bootstrap-icons;
+  background-image: unset !important;
+  font-size: 25px;
+  transform: unset !important;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.panel .side-panel.mobile .icon {
+  margin: unset !important;
+}
+.panel .content .box-dash {
+  background-color: white;
+  border-radius: 16px;
+  padding: 0.75rem;
+  position: relative;
+}
+.panel .content .box-dash .icon {
+  width: max-content;
+  margin-bottom: auto;
+  background: #000;
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.7px);
+  -webkit-backdrop-filter: blur(8.7px);
+  padding: 0.5rem;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.panel .content .box-dash .edit-info {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #000;
+}
+.panel .content .favorites .title {
+  font-size: 18px;
+}
+.panel .content .favorites .title i {
+  background: #fff;
+  padding: 6px;
+  border-radius: 6px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  color: #666;
+}
+.panel .content .favorites .favorite-item {
+  background: white;
+  border-radius: 16px;
+  position: relative;
+}
+.panel .content .favorites .favorite-item .price .old-price p {
+  color: #555;
+  opacity: 0.4;
+  width: max-content;
+  position: relative;
+  font-weight: bold;
+  font-size: 14px;
+}
+.panel .content .favorites .favorite-item .price .old-price p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 2px;
+  background: #555;
+}
+.panel .content .favorites .favorite-item .price p {
+  color: #67d1a4;
+}
+.panel .content .favorites .favorite-item .btn-add-to-cart {
+  border-radius: 10px !important;
+}
+.panel .content .favorites .favorite-item .btn-add-to-cart:hover {
+  border-color: var(--primary-color);
+}
+.panel .content .favorites .favorite-item .btn-trash {
+  background: transparent !important;
+  color: rgb(206, 0, 0) !important;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 17px;
+}
+.panel .content .edit-info .login-form {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 2rem;
+  background: white;
+  border-radius: 16px;
+}
+.panel .content .edit-info .login-form .icon {
+  width: max-content;
+  margin: auto;
+  margin-bottom: auto;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.7px);
+  -webkit-backdrop-filter: blur(8.7px);
+  border: 1px solid rgba(255, 255, 255, 0.21);
+  padding: 0.5rem 1rem;
+}
+.panel .content .edit-info .login-form textarea {
+  border: 1px solid #eee;
+  background: #fff;
+  box-shadow: none;
+  border-radius: 8px;
+}
+.panel .content .edit-info .login-form input:read-only {
+  border-radius: 8px;
+  background: #f8f8f8;
+  box-shadow: none;
+  border: 0;
+}
+.panel .content .edit-info .login-form input {
+  border: 1px solid #eee;
+  background: #fff;
+  box-shadow: none;
+  border-radius: 8px;
+}
+.panel .content .edit-info .login-form select:disabled {
+  border-radius: 8px;
+  background: #f8f8f8;
+  box-shadow: none;
+  border: 0;
+}
+.panel .content .edit-info .login-form select {
+  border: 1px solid #eee;
+  background-color: #fff;
+  box-shadow: none;
+  border-radius: 8px;
+}
+.panel .content .edit-info .login-form .btn-one:hover {
+  border: 1px solid var(--primary-color);
+}
+.panel .content .edit-info .btn-edit {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  color: #000;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.panel .content .tickets {
+  background: white;
+  border-radius: 16px;
+}
+.panel .content .tickets .item {
+  border-radius: 10px;
+  padding: 4px 0;
+  margin-bottom: 6px;
+}
+.panel .content .tickets .item:last-child {
+  margin-bottom: 0;
+}
+.panel .content .tickets .item:nth-child(2n) {
+  background-color: #f1f1f1;
+}
+.panel .content .tickets .item:nth-child(2n-1) {
+  background-color: #fff;
+  border: 1px solid #eee;
+}
+.panel .content .tickets .item a {
+  color: #000;
+}
+.panel .content .chat-history {
+  background: white;
+  border-radius: 16px;
+  overflow-y: auto;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  height: 50vh;
+  overflow-y: auto;
+  padding: 1rem;
+}
+.panel .content .chat-history li .bg-you {
+  background-color: #e5e5e5;
+  color: #000;
+}
+.panel .content .chat-history li .bg-me {
+  background-color: var(--primary-color);
+  color: var(--text-primary);
+}
+.panel .content .chat-history li .max-width-70 {
+  max-width: 70%;
+}
+.panel .content .chat-history li .img-you {
+  background: rgb(255, 255, 255);
+  font-size: 0px;
+  border-radius: 50% 50% 50% 0px;
+  border: 1px solid rgb(221, 221, 221);
+}
+.panel .content .chat-history li .img-me {
+  background: rgb(255, 255, 255);
+  font-size: 0px;
+  border-radius: 50% 50% 0px;
+  border: 1px solid rgb(221, 221, 221);
+}
+.panel .content .chat-history li .messege-text {
+  font-size: 13px;
+}
+.panel .content .chat-history li .files {
+  margin-top: 4px;
+}
+.panel .content .chat-history li .files .file-item {
+  font-size: 12px;
+  background-color: white;
+  padding: 4px 6px;
+  border-radius: 10px;
+  color: #000;
+}
+.panel .content .chat-history li .files .file-item i {
+  font-size: 14px;
+}
+.panel .content .form-message .btn {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.panel .content .form-message .btn i {
+  transform: rotateY(180deg);
+}
+.panel .content .form-message .btn:active {
+  border: 0;
+  outline: 0;
+}
+.panel .content .form-message .btn:focus {
+  border: 0;
+  outline: 0;
+}
+.panel .content .form-message textarea:focus {
+  box-shadow: none;
+  border-color: #dee2e6 !important;
+}
+.panel .content .orders {
+  background-color: white;
+  border-radius: 16px;
+  padding: 0.75rem;
+}
+.panel .content .orders .order-item {
+  padding: 4px;
+  border: 1px solid #d8d8d8;
+  border-radius: 16px;
+  transition: 0.5s;
+  margin-bottom: 0.75rem;
+}
+.panel .content .orders .order-item .btn-one {
+  border-radius: 10px !important;
+}
+.panel .content .orders .order-item:last-child {
+  margin-bottom: 0;
+}
+.panel .content .orders .order-item:hover {
+  box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.panel .content .orders .order-item .order-img {
+  width: 45px;
+  height: 45px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  margin-right: -10px;
+  list-style: none;
+}
+.panel .content .orders .order-item .order-img:first-child {
+  margin-right: 0;
+}
+.panel .content .orders .order-item .order-img img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.panel .content .order-detail .order-info,
+.panel .content .order-detail .user-info,
+.panel .content .order-detail .address-info {
+  background: white;
+  border-radius: 16px;
+  padding: 0.75rem;
+}
+.panel .content .order-detail .order-info .info-item,
+.panel .content .order-detail .user-info .info-item,
+.panel .content .order-detail .address-info .info-item {
+  flex-wrap: wrap;
+  gap: 4px;
+  background: color-mix(in srgb, var(--primary-color) 30%, transparent);
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+.panel .content .order-detail .order-info .info-item:last-child,
+.panel .content .order-detail .user-info .info-item:last-child,
+.panel .content .order-detail .address-info .info-item:last-child {
+  margin-bottom: 0;
+}
+.panel .content .order-detail table th,
+.panel .content .order-detail table td {
+  background: transparent;
+}
+.panel .content .packages .item-package {
+  background-color: white;
+  border-radius: 16px;
+  padding: 0.75rem;
+}
+.panel .content .packages .item-package img {
+  border-radius: 16px;
+}
+.panel .content .packages .item-package .btn-one:hover {
+  border-color: var(--primary-color) !important;
+}
+.panel .content .addresses .address-item {
+  background: white;
+  border-radius: 16px;
+}
+.panel .content .addresses .address-item .form-check {
+  background: color-mix(in srgb, var(--secondary-color) 30%, transparent);
+  width: max-content;
+  border-radius: 10px;
+  padding: 2px 10px;
+  display: flex;
+  align-items: center;
+}
+.panel .content .addresses .address-item .form-check input {
+  margin-right: 0;
+  margin-left: 6px;
+  margin-top: 0;
+}
+.panel .content .addresses .address-item .form-check input:checked {
+  background-color: #000;
+  border-color: #000;
+}
+.panel .content .addresses .address-item .form-check input:focus {
+  box-shadow: none;
+  border-color: #666;
+}
+.panel .content .addresses .address-item .btn-one:hover {
+  border-color: var(--primary-color);
+}
+.panel .content .addresses .edit-card {
+  border: 0;
+  border-radius: 0;
+  border-top: 1px solid #ddd;
+}
+.panel .content .addresses .edit-card input,
+.panel .content .addresses .edit-card select,
+.panel .content .addresses .edit-card textarea {
+  font-family: "Yekan-Re";
+  border: 1px solid #eee;
+  background-color: #fff;
+  box-shadow: none;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.panel .content .addresses .modal-add input,
+.panel .content .addresses .modal-add select,
+.panel .content .addresses .modal-add textarea {
+  font-family: "Yekan-Re";
+  border: 1px solid #eee;
+  background-color: #fff;
+  box-shadow: none;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+@media print {
+  .print-button {
+    /* display: none; */
+    visibility: hidden;
+  }
+}
+@media (max-width: 576px) {
+  .tickets {
+    border-radius: 16px !important;
+  }
+}
+
+/*# sourceMappingURL=panel.css.map */

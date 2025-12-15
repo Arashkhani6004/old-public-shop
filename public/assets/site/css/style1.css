@@ -1,0 +1,114 @@
+@font-face {
+    font-display: swap;
+    font-family: sans;
+    font-weight: 200;
+    font-style: normal;
+    src: url("../fonts/IRANSansWeb\(FaNum\).eot");
+    src: url("../fonts/IRANSansWeb(FaNum).eot?#iefix") format("embedded-opentype"), url("../fonts/IRANSansWeb(FaNum).woff") format("woff2"), url("../fonts/IRANSansWeb(FaNum).woff") format("woff"), url("../fonts/IRANSansWeb(FaNum).ttf") format("truetype")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: ismb;
+    font-style: normal;
+    src: url(../fonts/fontfamily/ismb.ttf)
+}
+
+body {
+    font-family: sans;
+    background-color: #fdfdfe
+    
+}
+
+.ismb {
+    font-family: ismb
+}
+
+.ltr {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.cat figure{
+    height: 6.5rem !important;
+}
+@keyframes scleton {
+0% {
+background-position: 0 50%;
+}
+50% {
+background-position: 100% 50%;
+}
+100% {
+background-position: 0 50%;
+}
+            }
+.icon-fix{
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,0.3);
+    z-index: 2;
+}
+.icon-iran{
+    width: 44px;
+    display: inline-table;
+}
+@media (max-width: 992px) {
+    .icon-iran{
+        width: 43px;
+    }
+}
+.breadcrumb li, .breadcrumb a{
+    color: var(--breadcrumbColor) !important;
+}
+.icon{
+    display: inline-table;
+}
+.order-detail{
+    background: white;
+    border-radius: 1rem;
+    height: 593px !important; 
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+@media(min-width:1400px){
+    .container{
+        width:1320px !important;
+        max-width:1320px !important;
+    }
+    .header .right{
+        width: 33.1% !important;
+    }
+    .header .left{
+        width: 66.9% !important;
+    }
+}
+@media(min-width:1200px) and (max-width:1400px){
+    .container{
+        width:1200 !important;
+        max-width:1200 !important;
+    }
+    .header .right{
+        width: 32.333% !important;
+    }
+    .header .left{
+        width: 67.667% !important;
+    }
+}
+.blog .card {
+    background-size: cover !important;
+}
+.pro .card figure .figure-inn img {
+        border-top-right-radius: 0.75rem;
+    border-top-left-radius: 0.75rem;
+}
+.pro .card figure {
+    height: max-content !important;
+}

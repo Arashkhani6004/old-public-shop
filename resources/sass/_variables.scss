@@ -1,0 +1,207 @@
+// colors
+$body: #fdfdfe;
+$sd-yek: #d70a83;
+$sd-yek-light: #fff1f0;
+$sd-do: #541280;
+$sd-do-light: #fcecf6;
+$sd-light: #f7f7f7;
+$sd-se: #333;
+$linear-gradient: linear-gradient(
+	45deg,
+	rgb(84, 18, 128) 0%,
+	rgb(215, 10, 131) 50%,
+	rgb(255, 211, 105) 100%
+);
+
+// social
+.instagram {
+	background: -webkit-linear-gradient(#4762d8, #da2981, #ffd369) !important;
+	color: #fff;
+	transition: 0.5s ease-in-out;
+	&:hover {
+		color: #da2981;
+		background: #fff !important;
+	}
+}
+.whatsapp {
+	background: rgb(99, 250, 118);
+	background: linear-gradient(180deg, #63fa76 0%, #25d03f 100%);
+	color: #fff;
+	transition: 0.5s ease-in-out;
+	&:hover {
+		color: #25d03f;
+		background: #fff;
+	}
+}
+.telegram {
+	background-color: #0088cc !important;
+	color: #fff;
+	transition: 0.5s ease-in-out;
+	&:hover {
+		color: #0088cc;
+		background-color: #fff !important;
+	}
+}
+.twitter {
+	background-color: #1d9bf0 !important;
+	color: #fff;
+	transition: 0.5s ease-in-out;
+	&:hover {
+		color: #1d9bf0;
+		background-color: #fff !important;
+	}
+}
+.facebook {
+	background-color: #4867aa !important;
+	color: #fff;
+	transition: 0.5s ease-in-out;
+	&:hover {
+		color: #4867aa;
+		background-color: #fff !important;
+	}
+}
+.linkedin {
+	background-color: #0a66c2 !important;
+	color: #fff;
+	transition: 0.5s ease-in-out;
+	&:hover {
+		color: #0a66c2;
+		background-color: #fff !important;
+	}
+}
+.youtube {
+	background-color: #ff0000 !important;
+	color: #fff;
+	transition: 0.5s ease-in-out;
+	&:hover {
+		color: #ff0000;
+		background-color: #fff !important;
+	}
+}
+
+// nav tabs
+.nav-tabs {
+	border-bottom: 1px solid $sd-yek;
+	padding: 0 1rem;
+}
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+	color: $sd-do;
+	font-weight: bolder;
+	background-color: transparent;
+	border-bottom: 2px solid $sd-do !important;
+	border-color: #fff #fff $sd-do;
+}
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+	border-bottom: 2px solid $sd-do !important;
+	border-color: #fff #fff $sd-do;
+	isolation: isolate;
+}
+
+// table
+.table {
+	--bs-table-bg: transparent;
+	--bs-table-striped-color: #212529;
+	--bs-table-striped-bg: rgba(252, 236, 246, 0.4);
+	--bs-table-active-color: #212529;
+	--bs-table-active-bg: rgba(252, 236, 246, 0.4);
+	--bs-table-hover-color: #212529;
+	--bs-table-hover-bg: rgba(252, 236, 246, 0.4);
+	color: #212529;
+}
+
+// btn
+.btn {
+	&-success {
+		background-color: green;
+		border: 1px solid green;
+		&:hover {
+			background-color: transparent;
+			color: green;
+		}
+	}
+}
+
+// accordion
+.accordion-button:not(.collapsed) {
+	color: $sd-yek;
+	background-color: #fff;
+}
+// .accordion-button,
+// .accordion-collapse {
+// 	border-left: 0px;
+// 	border-right: 0px;
+// }
+.accordion-button:not(.collapsed)::after {
+	background-image: url("../../../img/arrow-up-circle.svg");
+	transform: rotate(0deg);
+}
+.accordion-button::after {
+	background-image: url("../../../img/arrow-down-circle.svg");
+}
+
+// check box
+.check-box {
+	display: block;
+	position: relative;
+	padding: 0 2rem 0 0;
+	margin: 0.5rem 0;
+	cursor: pointer;
+	font-size: 1rem;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	transition: 0.5s ease-in-out;
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+		&:checked ~ .checkmark {
+			background-color: $sd-yek;
+			&:after {
+				display: block;
+			}
+		}
+	}
+	.checkmark {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 1.5rem;
+		width: 1.5rem;
+		background-color: #eee;
+		transition: 0.5s ease-in-out;
+		&:after {
+			content: "";
+			position: absolute;
+			display: none;
+			left: 9px;
+			top: 5px;
+			width: 5px;
+			height: 10px;
+			border: solid white;
+			border-width: 0 3px 3px 0;
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+	}
+	&:hover input ~ .checkmark {
+		background-color: $sd-yek;
+	}
+}
+
+//
+.form-check-input:checked {
+	background-color: $sd-yek;
+	border-color: $sd-yek;
+}
+.form-check-input:focus {
+	border-color: $sd-yek;
+	outline: 0;
+	box-shadow: none;
+}

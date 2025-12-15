@@ -1,0 +1,97 @@
+.title .right .icon {
+  width: 3px;
+  height: 30px;
+  background: var(--primary-color);
+}
+
+.breadcrumb li {
+  font-size: 14px;
+}
+.breadcrumb a {
+  color: #000;
+}
+
+.brand-card img {
+  border: 1px solid #acacac;
+  border-radius: 16px;
+  padding: 12px 14px;
+}
+
+.login-page .login-form {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20.8px);
+  -webkit-backdrop-filter: blur(6.8px);
+  border: 1px solid rgba(255, 255, 255, 0.21);
+  border-radius: 16px;
+}
+.login-page .login-form .icon {
+  width: max-content;
+  margin: auto;
+  margin-bottom: auto;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.7px);
+  -webkit-backdrop-filter: blur(8.7px);
+  border: 1px solid rgba(255, 255, 255, 0.21);
+  padding: 0.5rem 1rem;
+}
+.login-page .login-form input {
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: none;
+  border: 1px solid #ddd !important;
+}
+.login-page .login-form input:focus {
+  border-color: #eee !important;
+}
+.login-page .login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.368627451);
+  font-family: "Yekan-Li";
+}
+.login-page .login-form select {
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: none;
+  border: 1px solid #ddd !important;
+}
+.login-page .login-form select:focus {
+  border-color: #eee !important;
+}
+.login-page .login-form select::placeholder {
+  color: rgba(0, 0, 0, 0.368627451);
+  font-family: "Yekan-Li";
+}
+.login-page .login-form #timer {
+  width: 38px;
+  color: #000;
+}
+.login-page .login-form .btn-again {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 8px 8px;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+@keyframes btn-again {
+  0% {
+    display: none;
+    margin-bottom: -4rem;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    margin-bottom: 0;
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=auth.css.map */

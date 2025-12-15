@@ -1,0 +1,20 @@
+.title .right .icon {
+  width: 3px;
+  height: 30px;
+  background: var(--primary-color);
+}
+
+.breadcrumb li {
+  font-size: 14px;
+}
+.breadcrumb a {
+  color: #000;
+}
+
+.brand-card img {
+  border: 1px solid #acacac;
+  border-radius: 16px;
+  padding: 12px 14px;
+}
+
+/*# sourceMappingURL=list.css.map */

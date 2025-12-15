@@ -1,0 +1,56 @@
+.title .right .icon {
+  width: 3px;
+  height: 30px;
+  background: var(--primary-color);
+}
+
+.breadcrumb li {
+  font-size: 14px;
+}
+.breadcrumb a {
+  color: #000;
+}
+
+.blog-card img {
+  border-radius: 16px;
+}
+.blog-card .cat {
+  border-radius: 10px;
+  padding: 4px 10px;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  color: #000;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
+}
+.blog-card .title {
+  font-size: 16px;
+  color: #000;
+  height: 3.5rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.blog-card .description {
+  font-size: 14px;
+  color: #5f5f5f;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  height: 4rem;
+}
+.blog-card .date {
+  color: #000;
+  font-size: 12px;
+}
+.blog-card .date i {
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=list.css.map */

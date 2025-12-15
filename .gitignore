@@ -1,0 +1,24 @@
+/node_modules
+/public/hot
+/public/storage
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+package-lock.json
+uploads
+/.idea
+access copy.log
+access.log
+artisan copy
+error.log
+/.vscode
+.vscode
+/public/assets/my_admin
+/public/assets/my_site
+/storage/framework/
+/storage/logs/

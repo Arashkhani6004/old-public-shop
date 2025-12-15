@@ -1,0 +1,39 @@
+{
+    "private": true,
+    "scripts": {
+        "compile:sass": "node-sass -w resources/sass/ -o public/assets/site/css --recursive",
+        "start": "node-sass -w resources/sass/ -o public/assets/site/css --recursive",
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --disable-host-check --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "sass": "node-sass -w resources/sass/ -o public/assets/site/css --recursive",
+        "public": "sass --watch public/assets/site/scss/shared/public.scss:public/assets/site/css/shared/public.css",
+        "index": "sass --watch public/assets/site/scss/index/index.scss:public/assets/site/css/index/index.css",
+        "pro-cat": "sass --watch public/assets/site/scss/products/list.scss:public/assets/site/css/products/list.css",
+        "pro-detail": "sass --watch public/assets/site/scss/products/detail.scss:public/assets/site/css/products/detail.css",
+        "brands-list": "sass --watch public/assets/site/scss/brands/list.scss:public/assets/site/css/brands/list.css",
+        "cart": "sass --watch public/assets/site/scss/cart/checkout.scss:public/assets/site/css/cart/checkout.css",
+        "panel": "sass --watch public/assets/site/scss/panel/panel.scss:public/assets/site/css/panel/panel.css",
+        "auth": "sass --watch public/assets/site/scss/auth/auth.scss:public/assets/site/css/auth/auth.css",
+        "blog-list": "sass --watch public/assets/site/scss/blog/list.scss:public/assets/site/css/blog/list.css",
+        "blog-detail": "sass --watch public/assets/site/scss/blog/detail.scss:public/assets/site/css/blog/detail.css",
+        "us": "sass --watch public/assets/site/scss/us/us.scss:public/assets/site/css/us/us.css",
+        "search": "sass --watch public/assets/site/scss/search/search.scss:public/assets/site/css/search/search.css"
+    },
+    "devDependencies": {
+        "axios": "^0.19",
+        "cross-env": "^7.0",
+        "laravel-mix": "^5.0.1",
+        "lodash": "^4.17.19",
+        "resolve-url-loader": "^3.1.0"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "sass": "^1.86.3"
+    }
+}

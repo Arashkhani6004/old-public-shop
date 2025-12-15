@@ -1,0 +1,327 @@
+<?php
+
+namespace App\Http\Controllers\Site;
+
+use App\Http\Controllers\Controller;
+use App\Models\Domain;
+use App\Models\Setting;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Schema;
+
+class DomainsConvertController extends Controller
+{
+
+//    public function domainCheck(){
+//        $host_name = 'rahweb-public';
+//        $domain = Domain::all();
+//        dd($domain);
+//        $tableNameDomains = 'domain';
+//        if (!Schema::connection('mysql')->hasTable($tableNameDomains)) {
+//            Schema::connection('mysql')->create($tableNameDomains, function ($tableDomains) {
+//                $tableDomains->id();
+//                $tableDomains->boolean('domain_check')->default(0);
+//
+//
+//            });
+//        } else {
+//            $columnTypesDomains = [
+//                'domain_check' => 'boolean',
+//
+//            ];
+//
+//            foreach ($columnTypesDomains as $columnDomains => $typeDomains) {
+//                if (!Schema::connection('mysql')->hasColumn($tableNameDomains, $columnDomains)) {
+//                    Schema::connection('mysql')->table($tableNameDomains, function ($tableDomains) use ($columnDomains, $typeDomains) {
+//                        if ($typeDomains === 'string') {
+//                            $tableDomains->{$typeDomains}($columnDomains)->nullable()->default(null);
+//                        } elseif ($typeDomains === 'text') {
+//                            $tableDomains->{$typeDomains}($columnDomains)->nullable()->default(null);
+//                        } elseif ($typeDomains === 'timestamp') {
+//                            $tableDomains->{$typeDomains}($columnDomains)->nullable()->default(null);
+//                        } else {
+//                            $tableDomains->{$typeDomains}($columnDomains)->default(0);
+//                        }
+//                    });
+//                }
+//            }
+//        }
+//    }
+    public function inserSetting()
+    {
+
+        $tableNameSettings = 'setting';
+        if (!Schema::connection('mysql')->hasTable($tableNameSettings)) {
+            Schema::connection('mysql')->create($tableNameSettings, function ($tableSettings) {
+                $tableSettings->id();
+                $tableSettings->bigInteger('id')->unsigned();
+                $tableSettings->string('title')->nullable();
+                $tableSettings->string('logo')->nullable();
+                $tableSettings->string('favicon')->nullable();
+                $tableSettings->string('abouttitle')->nullable();
+                $tableSettings->longText('about');
+                $tableSettings->longText('about2');
+                $tableSettings->string('aboutimg')->nullable();
+                $tableSettings->longText('contact');
+                $tableSettings->longText('maps');
+                $tableSettings->longText('email');
+                $tableSettings->longText('address');
+                $tableSettings->longText('description_seo');
+                $tableSettings->longText('phone');
+                $tableSettings->timestamps();
+                $tableSettings->softDeletes();
+                $tableSettings->longText('rules')->nullable();
+                $tableSettings->string('tax')->nullable();
+                $tableSettings->text('alert');
+                $tableSettings->integer('disable')->default(0);
+                $tableSettings->string('color1')->nullable();
+                $tableSettings->string('color2')->nullable();
+                $tableSettings->string('color3')->nullable();
+                $tableSettings->string('color4')->nullable();
+                $tableSettings->integer('noindex')->default(0);
+                $tableSettings->string('h1')->nullable();
+                $tableSettings->text('logo2');
+                $tableSettings->text('title_artcat');
+                $tableSettings->text('des_artcat');
+                $tableSettings->text('title_brand');
+                $tableSettings->text('des_brand');
+                $tableSettings->text('title_offers');
+                $tableSettings->text('des_offers');
+                $tableSettings->text('title_contact');
+                $tableSettings->text('des_contact');
+                $tableSettings->text('title_rules');
+                $tableSettings->text('des_rules');
+                $tableSettings->text('title_products');
+                $tableSettings->text('des_products');
+                $tableSettings->integer('post_city')->nullable();
+                $tableSettings->string('post_name1')->nullable();
+                $tableSettings->integer('post_price1')->nullable();
+                $tableSettings->string('post_name2')->nullable();
+                $tableSettings->integer('post_price2')->nullable();
+                $tableSettings->text('kave_phonenumber');
+                $tableSettings->string('special_img')->nullable();
+                $tableSettings->text('kave_api');
+                $tableSettings->string('head_enamd')->nullable();
+                $tableSettings->text('footer_enamd');
+                $tableSettings->string('whatsapp')->nullable();
+                $tableSettings->text('analytics');
+                $tableSettings->text('tagmanager');
+                $tableSettings->integer('bank_type')->default(1);
+                $tableSettings->text('merchent');
+                $tableSettings->string('title_1');
+                $tableSettings->string('title_2');
+                $tableSettings->string('title_3');
+                $tableSettings->boolean('description_type')->default(1);
+                $tableSettings->text('code1');
+                $tableSettings->text('code2');
+                $tableSettings->integer('status_send')->nullable();
+                $tableSettings->integer('box_discount')->nullable();
+                $tableSettings->string('icon_fix')->nullable();
+                $tableSettings->string('icon_filter')->nullable();
+                $tableSettings->text('call_description');
+                $tableSettings->string('meli_bank_terminal_id')->nullable();
+                $tableSettings->string('meli_bank_terminal_key')->nullable();
+                $tableSettings->boolean('status_police')->default(0);
+                $tableSettings->string('color5')->nullable();
+                $tableSettings->text('domain_name');
+                $tableSettings->text('owner_email')->nullable();
+                $tableSettings->text('domain_name')->nullable();
+
+
+            });
+        } else {
+            $columnTypesSettings = [
+                'title' => 'string',
+                'logo' => 'string',
+                'favicon' => 'string',
+                'abouttitle' => 'string',
+                'about' => 'text',
+                'about2' => 'text',
+                'aboutimg' => 'string',
+                'contact' => 'text',
+                'maps' => 'text',
+                'email' => 'text',
+                'address' => 'text',
+                'description_seo' => 'text',
+                'phone' => 'text',
+                'rules' => 'text',
+                'tax' => 'string',
+                'alert' => 'text',
+                'disable' => 'integer',
+                'color1' => 'string',
+                'color2' => 'string',
+                'color3' => 'string',
+                'color4' => 'string',
+                'noindex' => 'integer',
+                'h1' => 'string',
+                'logo2' => 'text',
+                'title_artcat' => 'text',
+                'des_artcat' => 'text',
+                'title_brand' => 'text',
+                'des_brand' => 'text',
+                'title_offers' => 'text',
+                'des_offers' => 'text',
+                'title_contact' => 'text',
+                'des_contact' => 'text',
+                'title_rules' => 'text',
+                'des_rules' => 'text',
+                'title_products' => 'text',
+                'des_products' => 'text',
+                'post_city' => 'integer',
+                'post_name1' => 'string',
+                'post_price1' => 'integer',
+                'post_name2' => 'string',
+                'post_price2' => 'integer',
+                'kave_phonenumber' => 'text',
+                'special_img' => 'string',
+                'kave_api' => 'text',
+                'head_enamd' => 'string',
+                'footer_enamd' => 'text',
+                'whatsapp' => 'string',
+                'analytics' => 'text',
+                'tagmanager' => 'text',
+                'bank_type' => 'integer',
+                'merchent' => 'text',
+                'title_1' => 'string',
+                'title_2' => 'string',
+                'title_3' => 'string',
+                'description_type' => 'boolean',
+                'code1' => 'text',
+                'code2' => 'text',
+                'status_send' => 'integer',
+                'box_discount' => 'integer',
+                'icon_fix' => 'string',
+                'icon_filter' => 'string',
+                'call_description' => 'text',
+                'meli_bank_terminal_id' => 'string',
+                'meli_bank_terminal_key' => 'string',
+                'status_police' => 'boolean',
+                'color5' => 'string',
+                'domain_name' => 'string',
+                'owner_email' => 'string',
+                'owner_mobile' => 'string',
+
+            ];
+
+            foreach ($columnTypesSettings as $columnSettings => $typeSettings) {
+                if (!Schema::connection('mysql')->hasColumn($tableNameSettings, $columnSettings)) {
+                    Schema::connection('mysql')->table($tableNameSettings, function ($tableSettings) use ($columnSettings, $typeSettings) {
+                        if ($typeSettings === 'string') {
+                            $tableSettings->{$typeSettings}($columnSettings)->nullable()->default(null);
+                        } elseif ($typeSettings === 'text') {
+                            $tableSettings->{$typeSettings}($columnSettings)->nullable()->default(null);
+                        } elseif ($typeSettings === 'timestamp') {
+                            $tableSettings->{$typeSettings}($columnSettings)->nullable()->default(null);
+                        } else {
+                            $tableSettings->{$typeSettings}($columnSettings)->default(0);
+                        }
+                    });
+                }
+            }
+        }
+
+
+    }
+    public function domainInsert(){
+        $setting = Setting::first();
+        $host_name = request()->getHost();
+        $type = explode('.', $host_name);
+        if($type[0] == "www"){
+            $host = $type[1].'.'.$type[2];
+        }
+        else{
+            $host = $type[0].'.'.$type[1];
+        }
+        $setting->update([
+           'domain_name' =>$host
+        ]);
+    }
+
+
+    public function insertToSetting(Request $request)
+    {
+
+        set_time_limit(200000000);
+        \Log::info($request->page);
+
+        $domains = Domain::where('domain_check', 0 )->paginate(5);
+        $ipToPing = '185.208.79.200';
+        foreach ($domains as $domain) {
+            if ($domain->domain) {
+                $url = 'https://' . $domain->domain;
+
+
+                // تعداد تلاش‌ها برای درخواست
+                $maxAttempts = 3;
+                $attempts = 0;
+
+                do {
+                    try {
+                        $ch = curl_init();
+                        curl_setopt($ch, CURLOPT_URL, $url);
+                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                        curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_NTLM);
+                        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+                        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+                        curl_setopt($ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
+                        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // ignore SSL certificate validation
+                        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); // فعال کردن دنبال کردن هدایت
+                        $result = curl_exec($ch);
+
+                        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                        if ($httpCode != 200) {
+                            dd($domain);
+                            $domain->update([
+                                'out_of_service' => $httpCode
+                            ]);
+                        }
+
+
+
+                        //update  domain_name in every setting
+                        $setting = Setting::first();
+                        $setting->update([
+                            'domain_name' => $domain->domain
+                        ]);
+
+                        break; // خروج از حلقه در صورت موفقیت
+
+                    } catch (Exception $e) {
+                        \Log::info($e->getMessage());
+                    } finally {
+                        curl_close($ch);
+                    }
+
+                    $attempts++;
+
+                } while ($attempts < $maxAttempts);
+                // تست پینگ ه
+                try {
+                    $ip = gethostbyname($domain->domain);
+                    if ($ip != $ipToPing){
+                        $domain->update([
+                            'not_similar_host' => $ip
+                        ]);
+                    }
+
+                } catch (Exception $e) {
+                    \Log::info($e->getMessage());
+                }
+
+            }
+            $domain->update([
+                'domain_check'=>1
+            ]);
+
+
+        }
+        if (count($domains->items()) > 0) {
+            $next_page = $domains->currentPage() + 1;
+            return redirect(url()->current() . '?page=' . $next_page);
+        }
+
+        dd('time out');
+
+
+
+    }
+}

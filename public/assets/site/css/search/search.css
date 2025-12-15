@@ -1,0 +1,98 @@
+.title .right .icon {
+  width: 3px;
+  height: 30px;
+  background: var(--primary-color);
+}
+
+.breadcrumb li {
+  font-size: 14px;
+}
+.breadcrumb a {
+  color: #000;
+}
+
+.search-page .tabs-buttons {
+  padding: 16px 0;
+  z-index: 12;
+}
+.search-page .tabs-buttons .nav-pills {
+  gap: 8px;
+  justify-content: center;
+}
+.search-page .tabs-buttons .nav-pills li .nav-link {
+  border-radius: 10px;
+  border: 1px solid rgba(37, 37, 37, 0.2);
+  background: transparent;
+  color: var(--text-secondary);
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.search-page .tabs-buttons .nav-pills li .nav-link.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--text-primary);
+}
+.search-page .result .product-brands .brand-card {
+  position: relative;
+  transition: 0.5s;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 4px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+.search-page .result .product-brands .brand-card a {
+  color: #000;
+}
+.search-page .result .product-brands .brand-card:hover {
+  margin-right: 5px;
+}
+.search-page .result .blogs .blog-card {
+  text-align: right;
+}
+.search-page .result .blogs .blog-card img {
+  border-radius: 16px;
+}
+.search-page .result .blogs .blog-card .cat {
+  border-radius: 10px;
+  padding: 4px 10px;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  color: #000;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
+}
+.search-page .result .blogs .blog-card .title {
+  font-size: 18px;
+  color: #000;
+}
+.search-page .result .blogs .blog-card .description {
+  font-size: 14px;
+  color: #5f5f5f;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.search-page .result .blogs .blog-card .date {
+  color: #000;
+  font-size: 12px;
+}
+.search-page .result .blogs .blog-card .date i {
+  font-size: 16px;
+}
+
+@media (max-width: 576px) {
+  .search-page .result {
+    padding: 2.5rem 0.5rem 1.5rem 0.5rem;
+  }
+  .search-page .product-category .cat-card {
+    padding: 8px 8px !important;
+  }
+}
+
+/*# sourceMappingURL=search.css.map */
