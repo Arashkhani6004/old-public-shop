@@ -115,23 +115,23 @@ var swiper = new Swiper(".mySwiper-sale", {
             spaceBetween: 10,
         },
         576: {
-            slidesPerView: 2.5,
+            slidesPerView: 1.5,
             spaceBetween: 10,
         },
         768: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 18,
         },
         992: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 18,
         },
         1200: {
-            slidesPerView: 5,
+            slidesPerView: 4,
             spaceBetween: 18,
         },
         1400: {
-            slidesPerView: 6.25,
+            slidesPerView: 5,
             spaceBetween: 18,
         },
     },

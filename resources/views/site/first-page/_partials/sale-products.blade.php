@@ -8,13 +8,33 @@
                         {{ @$setting_header->title_2 }}
                     </p>
                 </div>
-                <a href="{{url('/bestselling')}}" class="link text-dark fm-re d-flex align-items-center">
+                <a href="{{ url('/bestselling') }}" class="link text-dark fm-re d-flex align-items-center">
                     مشاهده همه
                     <i class="bi bi-arrow-left-short d-flex ms-1"></i>
                 </a>
             </div>
-            <div class="row w-100 m-0 align-items-center mt-2 position-relative">
-                <div class="p-2 sale">
+            <div class="row w-100 m-0 align-items-center position-relative mt-sm-0 mt-3">
+                <div class="col-xxl-side col-xl-2 col-md-5 col-sm-4 col-12 p-2">
+                    <div class="offer-side text-center secondary-bg">
+                        <p class="fm-eb m-0">انتخاب‌های مشتریان</p>
+                        <a href="{{ url('/bestselling') }}"
+                            class="d-sm-flex d-none justify-content-center align-items-center small text-dark fm-re my-3">
+                            مشاهده همه
+                            <i class="bi bi-arrow-left-short d-flex ms-1"></i>
+                        </a>
+                        @if (isset($setting_header->logo2))
+                            <img src="{{ $setting_header->logo_image }}" class="offer-icon h-auto d-sm-block d-none"
+                                width="250" height="200" alt="{{ @$setting_header->title_2 }}"
+                                title="{{ @$setting_header->title_2 }}" loading="lazy" />
+                        @else
+                            <img src="{{ asset('assets/site/images/sale-icon.png') }}"
+                                class="offer-icon h-auto d-sm-block d-none" width="250" height="200"
+                                alt="{{ @$setting_header->title_2 }}" title="{{ @$setting_header->title_2 }}"
+                                loading="lazy" />
+                        @endif
+                    </div>
+                </div>
+                <div class="col-xxl-custom col-xl-10 col-md-7 col-sm-8 col-12 p-2 position-relative mt-sm-0 mt-5">
                     <div class="swiper mySwiper-sale p-2">
                         <div class="swiper-wrapper">
                             @foreach ($most_products as $row)
@@ -41,7 +61,8 @@
                                                 @if (@$row->price != null && @$row->price != 0 && @$row->count > 0)
                                                     <div class="text-end mt-3 price">
                                                         <p class="fm-eb m-0">{{ number_format(@$row->price) }}
-                                                            <span>تومان</span></p>
+                                                            <span>تومان</span>
+                                                        </p>
 
                                                         <div
                                                             class=" text-end d-flex justify-content-between align-items-center mt-1">
@@ -59,7 +80,8 @@
                                                             <p class="fm-eb m-0">تماس بگیرید</p>
                                                         @else
                                                             <p class="fm-eb m-0"> {{ number_format(@$row->old_price) }}
-                                                                <span>تومان</span></p>
+                                                                <span>تومان</span>
+                                                            </p>
                                                         @endif
                                                     </div>
                                                 @endif

@@ -30,7 +30,7 @@
 
 @stop
 @section('scripts')
-    <script src="{{ asset('assets/site/js/index/index.js?v0.02') }}"></script>
+    <script src="{{ asset('assets/site/js/index/index.js?v0.03') }}"></script>
     <script>
         (function() {
             const second = 1000,

@@ -51,7 +51,7 @@
     {{-- styles --}}
     <link rel="stylesheet" href="{{ asset('assets/site/css/shared/bootstrap.rtl.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/site/css/shared/swiper-bundle.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/site/css/shared/public.css?v0.11') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/site/css/shared/public.css?v0.12') }}" />
 
     <script src="{{asset('assets/site/js/sweetalert.min.js')}}?v={{time()}}" async></script>
     @yield('styles')

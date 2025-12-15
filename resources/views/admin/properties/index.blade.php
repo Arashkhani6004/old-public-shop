@@ -111,7 +111,7 @@
                                                                         colspan="1" style="width: 213.75px;"
                                                                         aria-sort="ascending"
                                                                         aria-label="Name: activate to sort column descending">
-                                                                        محل نمایش در صغحه جزئیات
+                                                                        محل نمایش در صفحه جزئیات
                                                                     </th>
 
                                                                     <th class="sorting" tabindex="0"
