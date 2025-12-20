@@ -1,4 +1,4 @@
-<div class="reply-comment col-11 me-auto position-relative mb-4">
+<div class="reply-comment col-11 me-auto mb-4">
     <div class="header d-flex align-items-center justify-content-between">
         <div class="d-flex align-items-center">
             <img src="assets/site/images/avatar.png" class="me-2" width="30" height="30" loading="lazy"

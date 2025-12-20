@@ -5,9 +5,9 @@
                 <div class="tab-pane fade @if ($key == 0) show active @endif"
                     id="pills-{{ $v->id }}" role="tabpanel" aria-labelledby="pills-{{ $v->id }}-tab"
                     tabindex="0">
+             
                     <div class="app-figure" id="zoom-fig">
-                        <a id="Zoom-1"
-                            class="MagicZoom d-flex justify-content-center align-items-center image-large"
+                        <a id="Zoom-1" class="MagicZoom d-flex justify-content-center align-items-center image-large"
                             href="{{ $v->big_image }}" data-zoom-image-2x="{{ $v->big_image }}"
                             data-image-2x="{{ $v->big_image }}">
                             <img src="{{ $v->big_image }}" srcset="{{ $v->big_image }} 2x" alt="{{ @$product->title }}"

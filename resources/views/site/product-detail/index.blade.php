@@ -37,7 +37,7 @@
     <meta name="availability" content="{{ @$product->count > 0 ? 'instock' : 'outofstock' }}">
 @endsection
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('assets/site/css/products/detail.css?v0.24') }}">
+    <link rel="stylesheet" href="{{ asset('assets/site/css/products/detail.css?v0.25') }}">
     <link rel="stylesheet" href="{{ asset('assets/site/css/products/magiczoomplus.css') }}">
 @stop
 
@@ -93,7 +93,7 @@
                             <div class="col-md-6 p-0 pe-md-2">
 
                                 {{-- select color --}}
-                                {{-- @include('site.product-detail._partials.colors') --}}
+                                @include('site.product-detail._partials.colors')
 
                                 {{-- attributes --}}
                                 @include('site.product-detail._partials.attributes')
@@ -189,7 +189,7 @@
 }
 </script>
     <script src="{{ asset('assets/site/js/products/magiczoomplus.js') }}"></script>
-    <script src="{{ asset('assets/site/js/products/detail.js?v0.04') }}"></script>
+    <script src="{{ asset('assets/site/js/products/detail.js?v0.07') }}"></script>
     <script>
         var tableList = document.querySelectorAll('.content table');
         tableList.forEach((item) => {

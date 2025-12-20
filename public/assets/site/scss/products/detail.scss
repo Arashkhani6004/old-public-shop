@@ -1,8 +1,8 @@
 @import "../shared/variables";
-.azislife-com .product-page .product-info .price .off{
+.azislife-com .product-page .product-info .price .off {
     background-color: $secondaryColor !important;
 }
-.azislife-com .product-page .mobile-btn-cart .off{
+.azislife-com .product-page .mobile-btn-cart .off {
     background-color: $secondaryColor !important;
 }
 .title {
@@ -555,37 +555,41 @@
             }
         }
         .description {
-            .btn-more{
+            .btn-more {
                 cursor: pointer;
                 margin: 1rem auto;
                 display: block;
                 width: max-content;
             }
-            input{
+            input {
                 opacity: 0;
                 display: none;
             }
-            .description-text{
+            .description-text {
                 max-height: 18rem;
                 overflow: hidden;
                 position: relative;
-                &::after{
+                &::after {
                     content: "";
                     position: absolute;
                     bottom: 0;
                     left: 0;
                     width: 100%;
                     height: 6rem;
-                    background: linear-gradient(180deg, rgba(255,255,255,0) 0%,  var(--body-color) 100%);
+                    background: linear-gradient(
+                        180deg,
+                        rgba(255, 255, 255, 0) 0%,
+                        var(--body-color) 100%
+                    );
                 }
             }
-            input:checked ~ .description-text{
+            input:checked ~ .description-text {
                 max-height: max-content !important;
-                &::after{
+                &::after {
                     display: none;
                 }
             }
-            input:checked ~ .btn-more{
+            input:checked ~ .btn-more {
                 display: none;
             }
             .iframe-parent {
@@ -721,6 +725,123 @@
             background-color: $prmaryLightColor;
             border-radius: 16px;
             padding: 16px;
+            .upload {
+                &__inputfile {
+                    width: 0.1px;
+                    height: 0.1px;
+                    opacity: 0;
+                    overflow: hidden;
+                    position: absolute;
+                    z-index: -1;
+                    padding: 0;
+                }
+
+                &__btn {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 4px;
+                    width: 100%;
+                    border: 1px dashed #000;
+                    border-radius: 10px;
+                    padding: 6px 4px;
+                    cursor: pointer;
+
+                    &-box {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                &__img {
+                    &-wrap {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 6px;
+                    }
+
+                    &-box {
+                        width: 70px;
+                    }
+
+                    &-close {
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 50%;
+                        background-color: rgb(146, 0, 0);
+                        position: absolute;
+                        top: 2px;
+                        right: 2px;
+                        text-align: center;
+                        z-index: 1;
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        &:after {
+                            content: "\2716";
+                            font-size: 10px;
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            .img-bg {
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                position: relative;
+                padding-bottom: 100%;
+            }
+            .star-rating {
+                direction: ltr;
+                display: inline-block;
+                cursor: default;
+
+                input[type="radio"] {
+                    display: none;
+                }
+
+                label {
+                    color: #c9c9c9;
+                    font-size: 24px;
+                    padding: 0;
+                    margin-left: 8px;
+                    cursor: pointer;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                label:hover,
+                label:hover ~ label,
+                input[type="radio"]:checked ~ label {
+                    color: #f2b600;
+                }
+            }
+            .image-comment {
+                display: none;
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .image-comment-label {
+                width: 100%;
+                background: #fff;
+                color: #373737;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 3px;
+                border-radius: 10px;
+                border: 1px dashed;
+                cursor: pointer;
+            }
+
             label {
                 color: $textSecondary;
             }
@@ -759,9 +880,34 @@
                 }
             }
         }
+        #comments {
+            .images-sent {
+                li {
+                    list-style: none;
+                    cursor: pointer;
+                }
+                figure {
+                    height: 4rem;
+                    margin: 0;
+                    .figure-in {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        img {
+                            border-radius: 10px;
+                            width: auto;
+                            height: auto;
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    }
+                }
+            }
+        }
         .main-comment {
             background-color: rgba(244, 244, 244, 0.7);
-            backdrop-filter: blur(20px);
             border-radius: 16px;
             padding: 20px;
             .body {
