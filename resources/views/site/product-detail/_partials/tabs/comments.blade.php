@@ -59,24 +59,27 @@
     <div class="col-xl-9 col-lg-8 col-md-7 p-1 ps-lg-2 align-content-center">
         @if (count($comments) > 0)
             @foreach ($comments as $key => $comment)
-                <div class="main-comment mb-2">
+                <div class="main-comment mb-2 position-relative">
+                    @if ($comment->replies->count() > 0)
+                        <div class="line"></div>
+                    @endif
                     <div class="header d-flex align-items-center justify-content-between">
                         <div class="d-flex align-items-center">
                             <img src="{{ asset('assets/site/images/avatar.png') }}" class="me-2" width="30"
                                 height="30" loading="lazy" alt="avatar" title="avatar">
-                            <p class="m-0 fm-b">
+                            <p class="m-0 fm-eb">
                                 {{ @$comment->user->name . ' ' . @$comment->user->family }}
                             </p>
                         </div>
                         <!-- reply button -->
-                        <button type="button" class="btn btn-secondary btn-sm px-3 rounded-3"
-                            data-bs-toggle="modal" data-bs-target="#exampleModal{{ @$comment->id }}">
+                        <button type="button" class="btn btn-secondary btn-sm px-3 rounded-3" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal{{ @$comment->id }}">
                             پاسخ
                         </button>
 
                     </div>
-                    <div class="body mt-3">
-                        <p class="fm-md m-0 mb-2">
+                    <div class="body mt-0 ms-5">
+                        <p class="fm-b m-0 mb-0">
                             {{ @$comment->title }}
                         </p>
                         <p class="fm-re m-0">
@@ -179,13 +182,12 @@
                             </div>
                         </div>
                     </div>
-
+                    @foreach ($comment->replies as $reply)
+                        @include('site.product-detail._partials.tabs.reply-comment')
+                    @endforeach
                 </div>
                 <!-- reply form modal -->
                 @include('site.product-detail._partials.tabs.reply-modal')
-                @foreach ($comment->replies as $reply)
-                    @include('site.product-detail._partials.tabs.reply-comment')
-                @endforeach
             @endforeach
         @else
             <div class="col-xxl-2 col-xl-3 col-6 m-auto p-0">

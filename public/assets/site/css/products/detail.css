@@ -798,7 +798,7 @@
   cursor: pointer;
 }
 .product-page .tabs #comments .images-sent figure {
-  height: 4rem;
+  height: 3.5rem;
   margin: 0;
 }
 .product-page .tabs #comments .images-sent figure .figure-in {
@@ -839,9 +839,25 @@
   bottom: 0;
 }
 .product-page .tabs .main-comment {
-  background-color: rgba(244, 244, 244, 0.7);
+  background-color: #fff;
   border-radius: 16px;
-  padding: 20px;
+  padding: 10px;
+}
+.product-page .tabs .main-comment .line {
+  position: absolute;
+  right: 26px;
+  bottom: 10px;
+  top: 55px;
+  width: 2px;
+  height: -webkit-fill-available;
+  background-color: #f1f1f1;
+}
+.product-page .tabs .main-comment .header img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #eee;
+  padding: 6px;
 }
 .product-page .tabs .main-comment .body {
   font-size: 14px;
@@ -856,10 +872,7 @@
   color: #fecb02;
 }
 .product-page .tabs .reply-comment {
-  background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 16px;
-  padding: 20px;
+  padding: 8px;
 }
 .product-page .tabs .reply-comment .body {
   font-size: 14px;
@@ -996,6 +1009,9 @@
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
+  .reply-comment {
+    width: -webkit-fill-available !important;
+  }
   .info-name {
     border-bottom: 0 !important;
   }
@@ -1013,6 +1029,9 @@
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
+  .reply-comment {
+    width: -webkit-fill-available !important;
+  }
   .info-name {
     border-bottom: 0 !important;
   }
@@ -1030,6 +1049,9 @@
   }
 }
 @media (max-width: 576px) {
+  .reply-comment {
+    width: -webkit-fill-available !important;
+  }
   .tabs .product-tabs-menu a {
     font-size: 14px;
   }
