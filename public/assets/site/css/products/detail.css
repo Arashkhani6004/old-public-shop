@@ -815,6 +815,29 @@
   max-width: 100%;
   max-height: 100%;
 }
+.product-page .tabs #comments .comments-images-modal .btn-close {
+  box-shadow: none;
+  outline: none;
+}
+.product-page .tabs #comments .comments-images-modal .mySwiper .swiper-slide {
+  cursor: pointer;
+}
+.product-page .tabs #comments .comments-images-modal .mySwiper2 .swiper-button-next::after,
+.product-page .tabs #comments .comments-images-modal .mySwiper2 .swiper-button-prev::after {
+  font-size: 20px;
+  color: #000;
+}
+.product-page .tabs #comments .comments-images-modal .mySwiper2 .swiper-button-next,
+.product-page .tabs #comments .comments-images-modal .mySwiper2 .swiper-button-prev {
+  border-radius: 6px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+  background: #fff;
+  width: 20px;
+  height: 40px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+}
 .product-page .tabs .main-comment {
   background-color: rgba(244, 244, 244, 0.7);
   border-radius: 16px;
@@ -835,7 +858,6 @@
 .product-page .tabs .reply-comment {
   background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(20px);
   border-radius: 16px;
   padding: 20px;
 }

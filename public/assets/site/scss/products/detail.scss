@@ -905,6 +905,34 @@
                     }
                 }
             }
+            .comments-images-modal {
+                .btn-close {
+                    box-shadow: none;
+                    outline: none;
+                }
+                .mySwiper {
+                    .swiper-slide {
+                        cursor: pointer;
+                    }
+                }
+                .mySwiper2 {
+                    .swiper-button-next,
+                    .swiper-button-prev {
+                        &::after {
+                            font-size: 20px;
+                            color: #000;
+                        }
+                        border-radius: 6px;
+                        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+                        background: #fff;
+                        width: 20px;
+                        height: 40px;
+                        margin: auto;
+                        top: 0;
+                        bottom: 0;
+                    }
+                }
+            }
         }
         .main-comment {
             background-color: rgba(244, 244, 244, 0.7);
@@ -926,7 +954,6 @@
         .reply-comment {
             background-color: rgba(#fff, 0.7);
             box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(20px);
             border-radius: 16px;
             padding: 20px;
             .body {

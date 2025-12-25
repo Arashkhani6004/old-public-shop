@@ -62,16 +62,16 @@
                 <div class="main-comment mb-2">
                     <div class="header d-flex align-items-center justify-content-between">
                         <div class="d-flex align-items-center">
-                            <img src="assets/site/images/avatar.png" class="me-2" width="30" height="30"
-                                loading="lazy" alt="avatar" title="avatar">
+                            <img src="{{ asset('assets/site/images/avatar.png') }}" class="me-2" width="30"
+                                height="30" loading="lazy" alt="avatar" title="avatar">
                             <p class="m-0 fm-b">
                                 {{ @$comment->user->name . ' ' . @$comment->user->family }}
                             </p>
                         </div>
                         <!-- reply button -->
-                        <button type="button" class="btn border-0 bg-transparent shadow-none p-0"
+                        <button type="button" class="btn btn-secondary btn-sm px-3 rounded-3"
                             data-bs-toggle="modal" data-bs-target="#exampleModal{{ @$comment->id }}">
-                            <i class="bi bi-reply d-flex fs-5"></i>
+                            پاسخ
                         </button>
 
                     </div>
@@ -96,7 +96,7 @@
                         {{-- comment images modal --}}
                         <div class="modal fade" id="commentImagesModal{{ @$key }}" tabindex="-1"
                             aria-labelledby="commentImagesModal" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-dialog modal-dialog-centered comments-images-modal">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <p class="modal-title fs-6" id="exampleModalLabel">تصاویر کاربران</p>
@@ -104,8 +104,7 @@
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <div
-                                            class="swiper mySwiper2">
+                                        <div class="swiper mySwiper2 mb-2">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
                                                     <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
