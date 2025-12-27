@@ -36,5 +36,12 @@
             ({{@$comments_count.' '. 'نظر'}} )
         </span>
     </div>
+    <span class="mx-2 text-secondary fm-li">|</span>
+    <div class="d-flex align-items-center">
+        <i class="bi bi-star-fill-left-text d-flex"></i>
+        <span class="font-small  fm-re ms-2">
+            {{@$averageRating.' '. 'میانگین امتیاز'}}
+        </span>
+    </div>
 
 </div>

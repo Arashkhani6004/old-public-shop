@@ -20,38 +20,38 @@
                 <div class="mb-3">
                     <p class="small mb-1 fm-li">امتیاز شما به این محصول :</p>
                     <div class="star-rating">
-                        <input id="star-5" type="radio" name="rating" value="star-5" />
+                        <input id="star-5" type="radio" name="star" value="5" />
                         <label for="star-5" title="5 stars">
                             <i class="active bi bi-star-fill" aria-hidden="true"></i>
                         </label>
-                        <input id="star-4" type="radio" name="rating" value="star-4" />
+                        <input id="star-4" type="radio" name="star" value="4" />
                         <label for="star-4" title="4 stars">
                             <i class="active bi bi-star-fill" aria-hidden="true"></i>
                         </label>
-                        <input id="star-3" type="radio" name="rating" value="star-3" />
+                        <input id="star-3" type="radio" name="star" value="3" />
                         <label for="star-3" title="3 stars">
                             <i class="active bi bi-star-fill" aria-hidden="true"></i>
                         </label>
-                        <input id="star-2" type="radio" name="rating" value="star-2" />
+                        <input id="star-2" type="radio" name="star" value="2" />
                         <label for="star-2" title="2 stars">
                             <i class="active bi bi-star-fill" aria-hidden="true"></i>
                         </label>
-                        <input id="star-1" type="radio" name="rating" value="star-1" checked />
+                        <input id="star-1" type="radio" name="star" value="1" checked />
                         <label for="star-1" title="1 star">
                             <i class="active bi bi-star-fill" aria-hidden="true"></i>
                         </label>
                     </div>
                 </div>
-                <div class="upload__box mb-3">
-                    <div class="upload__btn-box">
-                        <label class="upload__btn">
-                            <i class="bi bi-image d-flex fs-5"></i>
-                            <p class="small mb-0 fm-li">افزودن عکس</p>
-                            <input type="file" multiple="" data-max_length="20" class="upload__inputfile">
-                        </label>
-                    </div>
-                    <div class="upload__img-wrap"></div>
-                </div>
+{{--                <div class="upload__box mb-3">--}}
+{{--                    <div class="upload__btn-box">--}}
+{{--                        <label class="upload__btn">--}}
+{{--                            <i class="bi bi-image d-flex fs-5"></i>--}}
+{{--                            <p class="small mb-0 fm-li">افزودن عکس</p>--}}
+{{--                            <input type="file" multiple="" data-max_length="20" class="upload__inputfile">--}}
+{{--                        </label>--}}
+{{--                    </div>--}}
+{{--                    <div class="upload__img-wrap"></div>--}}
+{{--                </div>--}}
                 <button type="submit" class="btn btn-form position-relative">ثبت</button>
             </form>
         </div>
@@ -72,10 +72,13 @@
                             </p>
                         </div>
                         <!-- reply button -->
-                        <button type="button" class="btn btn-secondary btn-sm px-3 rounded-3" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal{{ @$comment->id }}">
-                            پاسخ
-                        </button>
+                        @if(\Illuminate\Support\Facades\Auth::check() && \Illuminate\Support\Facades\Auth::user()->admin == 1)
+                            <button type="button" class="btn btn-secondary btn-sm px-3 rounded-3" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal{{ @$comment->id }}">
+                                پاسخ
+                            </button>
+                        @endif
+
 
                     </div>
                     <div class="body mt-0 ms-5">
@@ -85,17 +88,17 @@
                         <p class="fm-re m-0">
                             {{ @$comment->content }}
                         </p>
-                        <ul class="d-flex align-items-center gap-2 flex-wrap images-sent p-0 m-0 mt-2">
-                            <li data-bs-toggle="modal" data-bs-target="#commentImagesModal{{ $key }}">
-                                <figure>
-                                    <div class="figure-in">
-                                        <img src="{{ asset('assets/site/images/pro1.jpg') }}" alt=""
-                                            title="" loading="lazy" />
+{{--                        <ul class="d-flex align-items-center gap-2 flex-wrap images-sent p-0 m-0 mt-2">--}}
+{{--                            <li data-bs-toggle="modal" data-bs-target="#commentImagesModal{{ $key }}">--}}
+{{--                                <figure>--}}
+{{--                                    <div class="figure-in">--}}
+{{--                                        <img src="{{ asset('assets/site/images/pro1.jpg') }}" alt=""--}}
+{{--                                            title="" loading="lazy" />--}}
 
-                                    </div>
-                                </figure>
-                            </li>
-                        </ul>
+{{--                                    </div>--}}
+{{--                                </figure>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
                         {{-- comment images modal --}}
                         <div class="modal fade" id="commentImagesModal{{ @$key }}" tabindex="-1"
                             aria-labelledby="commentImagesModal" aria-hidden="true">

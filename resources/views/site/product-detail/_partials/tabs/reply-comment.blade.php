@@ -5,7 +5,7 @@
             <img src="{{asset('assets/site/images/avatar.png')}}" class="me-2" width="30" height="30" loading="lazy"
                 alt="avatar" title="avatar">
             <p class="m-0 fm-eb">
-                {{ @$reply->user->name . ' ' . @$reply->user->family }} 
+                {{ @$reply->user->name . ' ' . @$reply->user->family }}
             </p>
         </div>
 
@@ -17,26 +17,26 @@
         <p class="fm-re m-0">
             {{ @$reply->content }}
         </p>
-        <ul class="d-flex align-items-center gap-2 flex-wrap images-sent p-0 m-0 mt-2">
-            <li data-bs-toggle="modal" data-bs-target="#commentImagesModalReply{{ $key }}">
-                <figure>
-                    <div class="figure-in">
-                        <img src="{{ asset('assets/site/images/pro2.jpg') }}" alt="" title=""
-                            loading="lazy" />
+{{--        <ul class="d-flex align-items-center gap-2 flex-wrap images-sent p-0 m-0 mt-2">--}}
+{{--            <li data-bs-toggle="modal" data-bs-target="#commentImagesModalReply{{ $key }}">--}}
+{{--                <figure>--}}
+{{--                    <div class="figure-in">--}}
+{{--                        <img src="{{ asset('assets/site/images/pro2.jpg') }}" alt="" title=""--}}
+{{--                            loading="lazy" />--}}
 
-                    </div>
-                </figure>
-            </li>
-             <li data-bs-toggle="modal" data-bs-target="#commentImagesModalReply{{ $key }}">
-                <figure>
-                    <div class="figure-in">
-                        <img src="{{ asset('assets/site/images/pro3.jpg') }}" alt="" title=""
-                            loading="lazy" />
+{{--                    </div>--}}
+{{--                </figure>--}}
+{{--            </li>--}}
+{{--             <li data-bs-toggle="modal" data-bs-target="#commentImagesModalReply{{ $key }}">--}}
+{{--                <figure>--}}
+{{--                    <div class="figure-in">--}}
+{{--                        <img src="{{ asset('assets/site/images/pro3.jpg') }}" alt="" title=""--}}
+{{--                            loading="lazy" />--}}
 
-                    </div>
-                </figure>
-            </li>
-        </ul>
+{{--                    </div>--}}
+{{--                </figure>--}}
+{{--            </li>--}}
+{{--        </ul>--}}
         {{-- comment images modal --}}
         <div class="modal fade" id="commentImagesModalReply{{ @$key }}" tabindex="-1"
             aria-labelledby="commentImagesModal" aria-hidden="true">

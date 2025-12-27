@@ -224,6 +224,11 @@ class HomeController extends Controller
         $bottom_properties = Properties::where('product_id', $product->id)->orderby('sort', 'ASC')->whereStatus('0')->get();
         $questions = Question::where('product_id', $product->id)->whereNotNull('answer')->get();
         $comments = Comment::where('commentable_id', $product->id)->whereNull('parent_id')->whereStatus(1)->where('commentable_type', 'App\Models\Product')->get();
+        $averageRating = Comment::where('commentable_id', $product->id)
+            ->where('commentable_type', 'App\Models\Product')
+            ->whereNull('parent_id')
+            ->whereStatus(1)
+            ->avg('star');
         $comments_count = Comment::where('commentable_id', $product->id)->whereStatus(1)->where('commentable_type', 'App\Models\Product')->count();
         $likes_count = Like::where('likeable_id', $product->id)->where('likeable_type', 'App\Models\Product')->count();
         $relate_ids  =  RelateData::where('datable_id', $product->id)->where('datable_type', 'App\Models\Product')->where('type', 1)->pluck('relatable_id');
@@ -257,7 +262,8 @@ class HomeController extends Controller
             'likes_count',
             'sloagens',
             'types',
-            'product_specifications'
+            'product_specifications',
+            'averageRating'
         ));
     }
 
