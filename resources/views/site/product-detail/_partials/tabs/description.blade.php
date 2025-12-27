@@ -1,4 +1,5 @@
-<p class="fm-b">
+<p class="fm-b d-flex align-items-center">
+    <i class="bi bi-caret-left-fill fs-4 me-1 d-flex primary-color"></i>
     توضیحات تکمیلی محصول
 </p>
 @if ($product->description != null)
@@ -15,7 +16,7 @@
             title="empty" loading="lazy" />
     </div>
     <p class="text-center text-dark small">
-        هنوز توضیحی راجع به این محصول وجود ندارد!
+     توضیحی راجع به این محصول وجود ندارد!
     </p>
 @endif
 

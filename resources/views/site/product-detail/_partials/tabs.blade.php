@@ -9,7 +9,7 @@
         </div>
     </nav>
 
-    <div class="container">
+    <div class="">
         <section id="description" class="mb-5">
             @include('site.product-detail._partials.tabs.description')
         </section>

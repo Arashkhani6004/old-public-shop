@@ -1,4 +1,5 @@
-<p class="fm-b">
+<p class="fm-b d-flex align-items-center">
+    <i class="bi bi-caret-left-fill fs-4 me-1 d-flex primary-color"></i>
     سوالات متداول راجع به
     {{ @$product->title }}
 </p>
@@ -28,6 +29,6 @@
             title="empty" loading="lazy" />
     </div>
     <p class="text-center text-dark small">
-        هنوز سوال متداولی راجع به این محصول وجود ندارد!
+        سوال متداولی راجع به این محصول وجود ندارد!
     </p>
 @endif

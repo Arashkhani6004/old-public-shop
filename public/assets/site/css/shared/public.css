@@ -8567,8 +8567,8 @@ nav .main-menu .left button:hover {
 }
 nav .main-menu .left .span-cart {
   position: absolute;
-  top: -8px;
-  right: -5px;
+  top: 0px;
+  right: 0px;
   border-radius: 50%;
   font-size: 12px;
   display: flex;

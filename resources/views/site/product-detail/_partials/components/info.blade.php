@@ -23,25 +23,28 @@
             </span>
         </a>
     @endif
-    <span class="mx-2 text-secondary fm-li">|</span>
+
     @if ($product->brands)
-        <a href="{{ route('site.brand.detail', ['id' => @$product->brands->url]) }}" class="fm-b m-0 font-small text-dark">
+        <span class="mx-2 text-secondary fm-li">|</span>
+        <a href="{{ route('site.brand.detail', ['id' => @$product->brands->url]) }}"
+            class="fm-b m-0 font-small text-dark">
             برند : <span class="fm-re"> {{ @$product->brands->title }}</span>
         </a>
     @endif
     <span class="mx-2 text-secondary fm-li">|</span>
     <div class="d-flex align-items-center">
-        <i class="bi bi-chat-left-text d-flex"></i>
-        <span class="font-small  fm-re ms-2">
-            ({{@$comments_count.' '. 'نظر'}} )
+        <i class="bi bi-star-fill fs-6 text-warning d-flex"></i>
+        <span class="fm-re ms-1">
+            {{ @$averageRating . ' ' . ' ' }}
         </span>
     </div>
     <span class="mx-2 text-secondary fm-li">|</span>
     <div class="d-flex align-items-center">
-        <i class="bi bi-star-fill-left-text d-flex"></i>
+        <i class="bi bi-chat-left-text fs-6 d-flex"></i>
         <span class="font-small  fm-re ms-2">
-            {{@$averageRating.' '. 'میانگین امتیاز'}}
+            ({{ @$comments_count . ' ' . 'نظر' }} )
         </span>
     </div>
+
 
 </div>

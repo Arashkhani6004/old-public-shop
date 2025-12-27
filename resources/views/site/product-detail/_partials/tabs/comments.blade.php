@@ -42,16 +42,16 @@
                         </label>
                     </div>
                 </div>
-{{--                <div class="upload__box mb-3">--}}
-{{--                    <div class="upload__btn-box">--}}
-{{--                        <label class="upload__btn">--}}
-{{--                            <i class="bi bi-image d-flex fs-5"></i>--}}
-{{--                            <p class="small mb-0 fm-li">افزودن عکس</p>--}}
-{{--                            <input type="file" multiple="" data-max_length="20" class="upload__inputfile">--}}
-{{--                        </label>--}}
-{{--                    </div>--}}
-{{--                    <div class="upload__img-wrap"></div>--}}
-{{--                </div>--}}
+                {{--                <div class="upload__box mb-3"> --}}
+                {{--                    <div class="upload__btn-box"> --}}
+                {{--                        <label class="upload__btn"> --}}
+                {{--                            <i class="bi bi-image d-flex fs-5"></i> --}}
+                {{--                            <p class="small mb-0 fm-li">افزودن عکس</p> --}}
+                {{--                            <input type="file" multiple="" data-max_length="20" class="upload__inputfile"> --}}
+                {{--                        </label> --}}
+                {{--                    </div> --}}
+                {{--                    <div class="upload__img-wrap"></div> --}}
+                {{--                </div> --}}
                 <button type="submit" class="btn btn-form position-relative">ثبت</button>
             </form>
         </div>
@@ -59,46 +59,52 @@
     <div class="col-xl-9 col-lg-8 col-md-7 p-1 ps-lg-2 align-content-center">
         @if (count($comments) > 0)
             @foreach ($comments as $key => $comment)
-                <div class="main-comment mb-2 position-relative">
+                <div class="main-comment mb-2 position-relative border">
                     @if ($comment->replies->count() > 0)
                         <div class="line"></div>
                     @endif
                     <div class="header d-flex align-items-center justify-content-between">
                         <div class="d-flex align-items-center">
-                            <img src="{{ asset('assets/site/images/avatar.png') }}" class="me-2" width="30"
+                            <img src="{{ asset('assets/site/images/user-cm.png') }}" class="me-2" width="30"
                                 height="30" loading="lazy" alt="avatar" title="avatar">
-                            <p class="m-0 fm-eb">
-                                {{ @$comment->user->name . ' ' . @$comment->user->family }}
-                            </p>
+                            <div>
+                                <p class="m-0 fm-b">
+                                    {{ @$comment->user->name . ' ' . @$comment->user->family }}
+                                </p>
+                                <div class="star-ratings-sprit"><span class="star-ratings-sprit-rating"
+                                        style="width: calc({{ $comment->star }}*20%);"></span>
+                                </div>
+                            </div>
+
                         </div>
                         <!-- reply button -->
-                        @if(\Illuminate\Support\Facades\Auth::check() && \Illuminate\Support\Facades\Auth::user()->admin == 1)
-                            <button type="button" class="btn btn-secondary btn-sm px-3 rounded-3" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal{{ @$comment->id }}">
+                        @if (\Illuminate\Support\Facades\Auth::check() && \Illuminate\Support\Facades\Auth::user()->admin == 1)
+                            <button type="button" class="btn btn-outline-secondary btn-sm px-2 rounded-3"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal{{ @$comment->id }}">
                                 پاسخ
                             </button>
                         @endif
 
 
                     </div>
-                    <div class="body mt-0 ms-5">
+                    <div class="body mt-2 ms-5">
                         <p class="fm-b m-0 mb-0">
                             {{ @$comment->title }}
                         </p>
-                        <p class="fm-re m-0">
+                        <p class="fm-re m-0 text-secondary">
                             {{ @$comment->content }}
                         </p>
-{{--                        <ul class="d-flex align-items-center gap-2 flex-wrap images-sent p-0 m-0 mt-2">--}}
-{{--                            <li data-bs-toggle="modal" data-bs-target="#commentImagesModal{{ $key }}">--}}
-{{--                                <figure>--}}
-{{--                                    <div class="figure-in">--}}
-{{--                                        <img src="{{ asset('assets/site/images/pro1.jpg') }}" alt=""--}}
-{{--                                            title="" loading="lazy" />--}}
+                        {{--                        <ul class="d-flex align-items-center gap-2 flex-wrap images-sent p-0 m-0 mt-2"> --}}
+                        {{--                            <li data-bs-toggle="modal" data-bs-target="#commentImagesModal{{ $key }}"> --}}
+                        {{--                                <figure> --}}
+                        {{--                                    <div class="figure-in"> --}}
+                        {{--                                        <img src="{{ asset('assets/site/images/pro1.jpg') }}" alt="" --}}
+                        {{--                                            title="" loading="lazy" /> --}}
 
-{{--                                    </div>--}}
-{{--                                </figure>--}}
-{{--                            </li>--}}
-{{--                        </ul>--}}
+                        {{--                                    </div> --}}
+                        {{--                                </figure> --}}
+                        {{--                            </li> --}}
+                        {{--                        </ul> --}}
                         {{-- comment images modal --}}
                         <div class="modal fade" id="commentImagesModal{{ @$key }}" tabindex="-1"
                             aria-labelledby="commentImagesModal" aria-hidden="true">

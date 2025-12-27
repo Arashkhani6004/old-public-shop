@@ -37,7 +37,7 @@
     <meta name="availability" content="{{ @$product->count > 0 ? 'instock' : 'outofstock' }}">
 @endsection
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('assets/site/css/products/detail.css?v0.25') }}">
+    <link rel="stylesheet" href="{{ asset('assets/site/css/products/detail.css?v0.27') }}">
     <link rel="stylesheet" href="{{ asset('assets/site/css/products/magiczoomplus.css') }}">
 @stop
 
@@ -93,7 +93,7 @@
                             <div class="col-md-6 p-0 pe-md-2">
 
                                 {{-- select color --}}
-                                @include('site.product-detail._partials.colors')
+                                {{-- @include('site.product-detail._partials.colors') --}}
 
                                 {{-- attributes --}}
                                 @include('site.product-detail._partials.attributes')
@@ -110,7 +110,7 @@
                                     @if (count($product->variable) > 0)
                                         <div class="var-select">
                                             <label class="small fm-b mb-2 mx-1">
-                                                انتخاب متغیر
+                                                انتخاب نوع
                                                 محصول
                                             </label>
                                             <select class="form-select form-select-sm" aria-label="Default select example"

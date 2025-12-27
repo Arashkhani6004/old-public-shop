@@ -793,6 +793,28 @@
 .product-page .tabs .comment-form .btn-form:hover {
   border-color: #000;
 }
+.product-page .tabs #comments .star-ratings-sprit {
+  background: url("../../images/star-golden.png") repeat-x;
+  margin-bottom: 5px;
+  height: 16px;
+  overflow: hidden;
+  width: 80px;
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -999em;
+  background-size: 16px;
+}
+.product-page .tabs #comments .star-ratings-sprit .star-ratings-sprit-rating {
+  background: url("../../images/star-golden.png") repeat-x;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-position: 0 100%;
+  float: right;
+  height: 15px;
+  display: block;
+  background-size: 16px;
+}
 .product-page .tabs #comments .images-sent li {
   list-style: none;
   cursor: pointer;
@@ -822,11 +844,6 @@
 .product-page .tabs #comments .comments-images-modal .mySwiper .swiper-slide {
   cursor: pointer;
 }
-.product-page .tabs #comments .comments-images-modal .mySwiper2 .swiper-button-next::after,
-.product-page .tabs #comments .comments-images-modal .mySwiper2 .swiper-button-prev::after {
-  font-size: 20px;
-  color: #000;
-}
 .product-page .tabs #comments .comments-images-modal .mySwiper2 .swiper-button-next,
 .product-page .tabs #comments .comments-images-modal .mySwiper2 .swiper-button-prev {
   border-radius: 6px;
@@ -837,6 +854,11 @@
   margin: auto;
   top: 0;
   bottom: 0;
+}
+.product-page .tabs #comments .comments-images-modal .mySwiper2 .swiper-button-next::after,
+.product-page .tabs #comments .comments-images-modal .mySwiper2 .swiper-button-prev::after {
+  font-size: 20px;
+  color: #000;
 }
 .product-page .tabs .main-comment {
   background-color: #fff;
@@ -855,9 +877,6 @@
 .product-page .tabs .main-comment .header img {
   width: 35px;
   height: 35px;
-  border-radius: 50%;
-  border: 2px solid #eee;
-  padding: 6px;
 }
 .product-page .tabs .main-comment .body {
   font-size: 14px;
@@ -1081,9 +1100,6 @@
   }
   .product-page .name h1 {
     font-size: 20px !important;
-  }
-  .product-page .product-info {
-    padding: 1rem !important;
   }
   .product-page .product-image .swiper {
     height: 100px !important;

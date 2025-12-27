@@ -881,6 +881,28 @@
             }
         }
         #comments {
+            .star-ratings-sprit {
+                background: url("../../images/star-golden.png") repeat-x;
+                margin-bottom: 5px;
+                height: 16px;
+                overflow: hidden;
+                width: 80px;
+                margin: 0;
+                font-size: 0;
+                line-height: 0;
+                text-indent: -999em;
+                background-size: 16px;
+                .star-ratings-sprit-rating {
+                    background: url("../../images/star-golden.png") repeat-x;
+                    background-position-x: 0%;
+                    background-position-y: 0%;
+                    background-position: 0 100%;
+                    float: right;
+                    height: 15px;
+                    display: block;
+                    background-size: 16px;
+                }
+            }
             .images-sent {
                 li {
                     list-style: none;
@@ -951,9 +973,7 @@
                 img {
                     width: 35px;
                     height: 35px;
-                    border-radius: 50%;
-                    border: 2px solid #eee;
-                    padding: 6px;
+ 
                 }
             }
             .body {
@@ -1255,9 +1275,6 @@
             h1 {
                 font-size: 20px !important;
             }
-        }
-        .product-info {
-            padding: 1rem !important;
         }
         .product-image {
             .swiper {

@@ -1,7 +1,7 @@
 <div class="row w-100 m-0">
     <div class="col-lg-12 col-12 p-2">
         <p class="font-md mb-2 d-flex align-items-center">
-            <i class="bi bi-caret-left-fill fs-4 me-1 d-flex color-theme-one"></i>
+            <i class="bi bi-caret-left-fill fs-4 me-1 d-flex primary-color"></i>
             بررسی عملکرد {{ $product->title }}
         </p>
         @if (isset($product->video_link))
@@ -16,7 +16,7 @@
                     title="empty" loading="lazy" />
             </div>
             <p class="text-center text-dark small">
-                هنوز ویدیو ای راجع به این محصول وجود ندارد!
+                 ویدیو ای راجع به این محصول وجود ندارد!
             </p>
         @endif
     </div>

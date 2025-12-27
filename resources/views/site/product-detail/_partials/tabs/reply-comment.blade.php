@@ -1,12 +1,13 @@
-
-<div class="reply-comment col-11 ms-5 mt-2 border rounded-4">
+<div class="reply-comment col-11 ms-5 mt-2 border-top">
     <div class="header d-flex align-items-center justify-content-between">
         <div class="d-flex align-items-center">
-            <img src="{{asset('assets/site/images/avatar.png')}}" class="me-2" width="30" height="30" loading="lazy"
-                alt="avatar" title="avatar">
-            <p class="m-0 fm-eb">
-                {{ @$reply->user->name . ' ' . @$reply->user->family }}
-            </p>
+            <img src="{{ asset('assets/site/images/user-cm.png') }}" class="me-2" width="30" height="30"
+                loading="lazy" alt="avatar" title="avatar">
+                <p class="m-0 fm-b">
+                    {{ @$reply->user->name . ' ' . @$reply->user->family }}
+                </p>
+
+
         </div>
 
     </div>
@@ -14,29 +15,29 @@
         <p class="fm-b m-0 mb-0">
             {{ @$reply->title }}
         </p>
-        <p class="fm-re m-0">
+        <p class="fm-re m-0 text-secondary">
             {{ @$reply->content }}
         </p>
-{{--        <ul class="d-flex align-items-center gap-2 flex-wrap images-sent p-0 m-0 mt-2">--}}
-{{--            <li data-bs-toggle="modal" data-bs-target="#commentImagesModalReply{{ $key }}">--}}
-{{--                <figure>--}}
-{{--                    <div class="figure-in">--}}
-{{--                        <img src="{{ asset('assets/site/images/pro2.jpg') }}" alt="" title=""--}}
-{{--                            loading="lazy" />--}}
+        {{--        <ul class="d-flex align-items-center gap-2 flex-wrap images-sent p-0 m-0 mt-2"> --}}
+        {{--            <li data-bs-toggle="modal" data-bs-target="#commentImagesModalReply{{ $key }}"> --}}
+        {{--                <figure> --}}
+        {{--                    <div class="figure-in"> --}}
+        {{--                        <img src="{{ asset('assets/site/images/pro2.jpg') }}" alt="" title="" --}}
+        {{--                            loading="lazy" /> --}}
 
-{{--                    </div>--}}
-{{--                </figure>--}}
-{{--            </li>--}}
-{{--             <li data-bs-toggle="modal" data-bs-target="#commentImagesModalReply{{ $key }}">--}}
-{{--                <figure>--}}
-{{--                    <div class="figure-in">--}}
-{{--                        <img src="{{ asset('assets/site/images/pro3.jpg') }}" alt="" title=""--}}
-{{--                            loading="lazy" />--}}
+        {{--                    </div> --}}
+        {{--                </figure> --}}
+        {{--            </li> --}}
+        {{--             <li data-bs-toggle="modal" data-bs-target="#commentImagesModalReply{{ $key }}"> --}}
+        {{--                <figure> --}}
+        {{--                    <div class="figure-in"> --}}
+        {{--                        <img src="{{ asset('assets/site/images/pro3.jpg') }}" alt="" title="" --}}
+        {{--                            loading="lazy" /> --}}
 
-{{--                    </div>--}}
-{{--                </figure>--}}
-{{--            </li>--}}
-{{--        </ul>--}}
+        {{--                    </div> --}}
+        {{--                </figure> --}}
+        {{--            </li> --}}
+        {{--        </ul> --}}
         {{-- comment images modal --}}
         <div class="modal fade" id="commentImagesModalReply{{ @$key }}" tabindex="-1"
             aria-labelledby="commentImagesModal" aria-hidden="true">
